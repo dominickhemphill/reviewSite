@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${review.title}">Excalibur</title>
+</head>
+<body>
+    <header>
+        <h1><a href="/reviews"> "The Many Face Dom" </a></h1>
+        <h1 th:text="${review.title}"></h1>
+    </header>
+        <img th:src="|@{/images/}${review.imgUrL}" alt="This is a picture"/>
+    <section
+         th:text="${review.category}">
+    </section>
+        <ul>
+            <section th:text="${review.content}"></section>
+        </ul> 
+    <footer>
+        <small>Copyright South Harmon Institute of Technology 2018</small>
+    </footer>
+</body>
+</html>

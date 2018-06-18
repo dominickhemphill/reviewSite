@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Excalibur</title>
+</head>
+<body>
+	<h1>"Greatness in the Making"</h1>
+	<ol>
+		<p>*Disclaimer*  You are about to embark on a path to excellence.  
+		Please keep your hands inside the ride at all times. *Disclaimer*
+		</p>
+		<li th:each="review : ${reviews}">
+			<a th:href="|@{/reviews/}${review.movieId}|">
+				<span th:text = "${review.title}"></span>
+			</a>
+		</li>
+	</ol>
+</body>
+</html>
