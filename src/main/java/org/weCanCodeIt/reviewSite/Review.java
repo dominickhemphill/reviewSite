@@ -1,38 +1,57 @@
 package org.weCanCodeIt.reviewSite;
+import java.util.Collection;
+
+import javax.annotation.Generated;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+
+
 //review class
+@Entity
 public class Review 
 //instance variables
 {
-	private long movieId;
-	private String title;
+	@ManyToOne
+	private Category category;
+
+	@Id
+	@GeneratedValue
+	private Long movieId;
+	private String name;
 	private String imgUrL;
-	private String category;
-	private String content;
+	private String description;
 	
 	
-	public Review(long movieId, String title, String imgUrL, String category, String content)
+	
+	public Review () {}
+	
+	
+	
+	public Review(String name, String imgUrL, String description, Category category)
 	{
-		super();
-		this.movieId = movieId;
-		this.title = title;
+		this.name = name;
 		this.imgUrL = imgUrL;
+		this.description = description;
 		this.category = category;
-		this.content = content;
 	}
-	public long getMovieId() {
+	public Long getMovieId() {
 		return movieId;
 	}
-	public String getTitle() {
-		return title;
+	public String getName() {
+		return name;
 	}
 	public String getImgUrL() {
 		return imgUrL;
 	}
-	public String getCategory() {
-		return category;
+	public String getDescription() {
+		return description;
 	}
-	public String getContent() {
-		return content;
+
+	public Category getCategory() {
+		return category;
 	}
 
 }

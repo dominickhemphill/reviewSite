@@ -22,7 +22,7 @@ public class ReviewSiteControllerTest
 	MockMvc mvc;
 	
 	@MockBean
-	ReviewSiteRepository reviewRepo;
+	ReviewRepository reviewRepo;
 	
 	@Mock
 	Review review;

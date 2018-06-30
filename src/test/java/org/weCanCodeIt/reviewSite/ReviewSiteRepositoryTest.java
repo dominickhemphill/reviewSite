@@ -10,7 +10,7 @@ import java.util.Collection;
 import org.junit.Test;
 public class ReviewSiteRepositoryTest 
 {
-	ReviewSiteRepository reviewRepo = new ReviewSiteRepository ();
+	ReviewRepository reviewRepo = new ReviewRepository ();
 	Review review = new Review(999L,"Test Title","testImGUrl","category","content"); 
 	
 	@Test

@@ -3,6 +3,7 @@
 <head>
 	<title>Excalibur</title>
 </head>
+<link rel="stylesheet" href="/css/style.css" />
 <body>
 	<h1>"Greatness in the Making"</h1>
 	<ol>
@@ -11,7 +12,7 @@
 		</p>
 		<li th:each="review : ${reviews}">
 			<a th:href="|@{/reviews/}${review.movieId}|">
-				<span th:text = "${review.title}"></span>
+				<span th:text = "${review.name}"></span>
 			</a>
 		</li>
 	</ol>
