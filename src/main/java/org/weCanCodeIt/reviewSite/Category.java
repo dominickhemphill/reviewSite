@@ -30,7 +30,7 @@ public class Category {
 
 	@Override
 	public String toString() {
-		return "Category [id=" + id + ", title=" + title + ", reviews=" + reviews + "]";
+		return title;
 	}
 
 	public Long getId() {

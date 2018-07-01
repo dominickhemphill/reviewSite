@@ -18,20 +18,23 @@ public class ReviewPopulator implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-		Category comedy = categoryRepo.save(new Category("comedy"));
-		Category action = categoryRepo.save(new Category("action"));
-		Category horror = categoryRepo.save(new Category("horror"));
-		Category romance = categoryRepo.save(new Category("romance"));
+		Category insect = categoryRepo.save(new Category("insect"));
+		Category mammal = categoryRepo.save(new Category("mammal"));
+		Category reptiles = categoryRepo.save(new Category("reptiles"));
+		Category invertebrates = categoryRepo.save(new Category("invertebrates"));
+		Category fish = categoryRepo.save(new Category("fish"));
+		Category bird = categoryRepo.save(new Category("bird"));
+		
 
 		
-		Review dumbanddumber = reviewRepo.save(new Review("Black Mamba","url","desc", comedy));
-		Review harlemnights = reviewRepo.save(new Review("Jellyfish","url","desc", comedy));
-		Review badboys = reviewRepo.save(new Review("Great White Shark","url","desc", action));
-		Review XXX = reviewRepo.save(new Review("Sea Snake","url","desc", action));
-		Review fridaythe13th = reviewRepo.save(new Review("African bee","url","desc", horror));
-		Review amityvillehorror = reviewRepo.save(new Review("Mosquito","url","desc", horror));
-		Review dirtydancing = reviewRepo.save(new Review("Falcon","url","desc", romance));
-		Review jasonslyric = reviewRepo.save(new Review("Eagle","url","desc", romance));
+		Review blackmamba = reviewRepo.save(new Review("Black Mamba","url","desc", reptiles));
+		Review jellyfish = reviewRepo.save(new Review("Jellyfish","url","desc", invertebrates));
+		Review greatwhiteshark = reviewRepo.save(new Review("Great White Shark","url","desc", fish));
+		Review seasnake = reviewRepo.save(new Review("Sea Snake","url","desc", reptiles));
+		Review africanbee = reviewRepo.save(new Review("African bee","bee.jpeg","desc", insect));
+		Review mosquito = reviewRepo.save(new Review("Mosquito","url","desc", insect));
+		Review falcon = reviewRepo.save(new Review("Falcon","url","desc", bird));
+		Review eagle = reviewRepo.save(new Review("Eagle","url","desc", bird));
 
 		
 		

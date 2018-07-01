@@ -1,13 +1,13 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    
+     
 </head>
 <link rel="stylesheet" href="/css/style.css" />
 <body>
 	<div class ="container clearfix">
     <header>
-        <h1 class ="center"><a href="/review"> "The Many Face Dom" </a></h1>
+        
         <h1 th:text="${review.name}" class ="center"></h1>
     </header>
         <img th:src="|@{/images/}${review.imgUrL}" alt="This is a picture" class = "center hero-image"/>
