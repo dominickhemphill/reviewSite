@@ -7,19 +7,18 @@
 <body>
 	<div class ="container clearfix">
     <header>
-        <h1 class ="center"><a href="/review"> "The Many Face Dom" </a></h1>
+        <h1 class ="center"><a href="/reviews"> "Reviews Link" </a></h1>
         <h1 th:text="${review.name}" class ="center"></h1>
     </header>
         <img th:src="|@{/images/}${review.imgUrL}" alt="This is a picture" class = "center hero-image"/>
-    <section
-         th:text="${review.category}">
+    <section>
     </section>
         <ul>
-            <section th:text="${review.category}"></section>
+            <section></section>
         </ul> 
     </div>
     <footer>
-        <small>Copyright South Harmon Institute of Technology 2018</small>
+        <small></small>
     </footer>
 </body>
 </html>

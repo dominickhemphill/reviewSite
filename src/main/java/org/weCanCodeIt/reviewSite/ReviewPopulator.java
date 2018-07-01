@@ -18,20 +18,18 @@ public class ReviewPopulator implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-		Category comedy = categoryRepo.save(new Category("comedy"));
-		Category action = categoryRepo.save(new Category("action"));
-		Category horror = categoryRepo.save(new Category("horror"));
-		Category romance = categoryRepo.save(new Category("romance"));
+		Category mammal = categoryRepo.save(new Category("mammal"));
+		Category bird = categoryRepo.save(new Category("bird"));
+		Category reptile = categoryRepo.save(new Category("reptile"));
+		Category insect = categoryRepo.save(new Category("insect"));
 
 		
-		Review dumbanddumber = reviewRepo.save(new Review("Black Mamba","url","desc", comedy));
-		Review harlemnights = reviewRepo.save(new Review("Jellyfish","url","desc", comedy));
-		Review badboys = reviewRepo.save(new Review("Great White Shark","url","desc", action));
-		Review XXX = reviewRepo.save(new Review("Sea Snake","url","desc", action));
-		Review fridaythe13th = reviewRepo.save(new Review("African bee","url","desc", horror));
-		Review amityvillehorror = reviewRepo.save(new Review("Mosquito","url","desc", horror));
-		Review dirtydancing = reviewRepo.save(new Review("Falcon","url","desc", romance));
-		Review jasonslyric = reviewRepo.save(new Review("Eagle","url","desc", romance));
+		Review blackMamba = reviewRepo.save(new Review("Black Mamba","blackMamba.jpg","desc", reptile));
+		Review jellyfish = reviewRepo.save(new Review("Jellyfish","jellyfish.jpg","desc", mammal));
+		Review africanBee = reviewRepo.save(new Review("African bee","africanBee.jpg","desc", insect));
+		Review mosquito = reviewRepo.save(new Review("Mosquito","mosquito.jpg","desc", insect));
+
+	
 
 		
 		
