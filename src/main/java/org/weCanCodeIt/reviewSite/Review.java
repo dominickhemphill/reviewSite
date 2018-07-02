@@ -1,11 +1,8 @@
 package org.weCanCodeIt.reviewSite;
-import java.util.Collection;
-
-import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 
 
@@ -13,7 +10,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Review 
 //instance variables
-{
+{	
 	@ManyToOne
 	private Category category;
 
@@ -22,6 +19,7 @@ public class Review
 	private Long movieId;
 	private String name;
 	private String imgUrL;
+	@Lob
 	private String description;
 	
 	

@@ -2,9 +2,11 @@ package org.weCanCodeIt.reviewSite;
 
 import java.util.Arrays;
 import java.util.Collection;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -14,7 +16,7 @@ public class Category {
 	@GeneratedValue
 	private Long id;
 	private String title;
-	
+	@Lob
 	@OneToMany(mappedBy = "category")
 	protected Collection<Review>reviews;
 	
@@ -30,7 +32,7 @@ public class Category {
 
 	@Override
 	public String toString() {
-		return "Category [id=" + id + ", title=" + title + ", reviews=" + reviews + "]";
+		return title;
 	}
 
 	public Long getId() {

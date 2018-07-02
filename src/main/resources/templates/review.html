@@ -1,24 +1,34 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+
+<p class ="center"><a href="/reviews"> "Home page" </a></p>
     
 </head>
-<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/reviewLayout.css" />
 <body>
+
 	<div class ="container clearfix">
     <header>
-        <h1 class ="center"><a href="/reviews"> "Reviews Link" </a></h1>
-        <h1 th:text="${review.name}" class ="center"></h1>
+        
+        <h1 class ="center" th:text="${review.name}"></h1>
+       
     </header>
+    
         <img th:src="|@{/images/}${review.imgUrL}" alt="This is a picture" class = "center hero-image"/>
     <section>
     </section>
-        <ul>
-            <section></section>
-        </ul> 
+     <h4 th:text="${review.category}" class ="center"></h4>
+        <p th:text="${review.description}" ></p> 
     </div>
     <footer>
         <small></small>
     </footer>
+    
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script src = "/mechanics.js"></script>
 </body>
 </html>

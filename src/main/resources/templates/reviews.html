@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Excalibur</title>
+    <title>Dangerous Animals Review</title>
 </head>
-<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/layout.css" />
 <body>
-	<h1>"Greatness in the Making"</h1>
-	<ol>
-		<p>*Disclaimer*  You are about to embark on a path to excellence.  
-		Please keep your hands inside the ride at all times. *Disclaimer*
-		</p>
-		<li th:each="review : ${reviews}">
-			<a th:href="|@{/reviews/}${review.movieId}|">
-				<span th:text = "${review.name}"></span>
-			</a>
-		</li>
-	</ol>
+    <header>
+       <div class="row">
+       <ul class ="main-nav">
+       <li th:each="review : ${reviews}">
+            <a th:href="|@{/reviews/}${review.movieId}|">
+            <span th:text = "${review.name}"></span>
+            </a>
+        </li>
+                     
+       </ul>
+
+       </div>
+       <div class="hero">
+       <h1>Worlds Most Dangerous Animals</h1>
+       <div class="button">
+       <a href="/categories" class ="btn btn-one"> Categories</a>
+       </div>
+       </div>
+   </header>
 </body>
 </html>

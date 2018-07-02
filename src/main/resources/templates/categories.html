@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dangerous Animals</title>
+</head>
+<link rel="stylesheet" href="/css/style.css" />
+<body>
+	<h1>"Greatness in the Making"</h1>
+	<ol>
+	<li th:each="category : ${categories}">
+			<a th:href="|@{/categories/}${category.id}|">
+				<span th:text = "${category.title}"></span>
+			</a>
+		</li>
+	</ol>
+	<ol>
+		<p>*Disclaimer*  You are about to embark on a path to excellence.  
+		Please keep your hands inside the ride at all times. *Disclaimer*
+		</p>
+		
+	</ol>
+	<p><a href = "./reviews">Home Page</a></p>
+</body>
+</html>
