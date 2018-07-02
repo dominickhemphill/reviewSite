@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Dangerous Animals</title>
+	<title>Animal category</title>
 </head>
-<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/categoryLayout.css" />
 <body>
 	<h1 th:text = "${category.title}">"Greatness in the Making"</h1>
 	
 
 
-	<ol>
+	<ul>
 		<li th:each="review : ${category.reviews}">
 			<a th:href="|@{/reviews/}${review.movieId}|">
 				<span th:text = "${review.name}"></span>
 			</a>
 		</li>
-	</ol>
-	<p><a href = "/categories">Categories Page</a></p>
+	</ul>
+
+	<footer><a href = "/categories">Categories Page</a></footer>
 </body>
 </html>
