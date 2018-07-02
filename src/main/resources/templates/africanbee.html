@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dangerous Animals Review</title>
+</head>
+<link rel="stylesheet" href="/css/layout.css" />
+<body>
+	<header>
+        <div class="row">
+        <ul class ="main-nav">
+        <li th:each="review : ${reviews}">
+			<a th:href="|@{/reviews/}${review.movieId}|">
+			<span th:text = "${review.category}"></span>
+			</a>
+		</li>
+                      
+        </ul>
+
+        </div>
+
+        <div class="hero">
+        <h1>Worlds Most Dangerous Animals</h1>
+        </div>
+    </header>
+	
