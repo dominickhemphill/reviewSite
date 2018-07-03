@@ -5,16 +5,18 @@
 </head>
 <link rel="stylesheet" href="/css/categoriesLayout.css" />
 <body>
-	<h1>"Greatness in the Making"</h1>
-	<ol>
+<header>
+	<h1>Our categories of the world's most dangerous animals</h1>
+	<h3>Click any of these to continue!</h3>
+	</header>
+	<ul>
 	<li th:each="category : ${categories}">
 			<a th:href="|@{/categories/}${category.id}|">
 				<span th:text = "${category.title}"></span>
 			</a>
 		</li>
-	</ol>
-	<ol>
-	</ol>
-	<p><a href = "./reviews">Home Page</a></p>
+	</ul>
+
 </body>
+<footer><a href = "./reviews">Home Page</a></footer>
 </html>
