@@ -13,8 +13,13 @@ h1 {
 li{
 	float: left;
 	list-style-type: none;
-	
 	text-decoration-style: none;
+	font-size: 140%;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+a{
+	text-decoration:none;
+	color: blue;
 }
 footer{
 	padding-top: 30%;
