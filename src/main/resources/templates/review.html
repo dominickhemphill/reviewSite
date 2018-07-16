@@ -8,6 +8,13 @@
 <link rel="stylesheet" href="/css/reviewLayout.css" />
 <body>
 
+<form th:action="|/reviews/${movieId}|" method="POST">
+		<div>
+			<label>User Name: <input type="text" name = "userName"/></label>
+			<label> Comments: <input type="text" name="contents"/></label>
+		<input type="submit" value="Enter" />
+		</div>
+</form>
 	<div class ="container clearfix">
     <header>
         
@@ -17,6 +24,9 @@
     
         <img th:src="|@{/images/}${review.imgUrL}" alt="This is a picture" class = "center hero-image"/>
     <section>
+    <ul>
+    	<li  th:each="comment: ${review.comments}" th:text="|${comment.userName}: ${comment.contents}"> </li>
+    </ul> 
     </section>
      <h4 th:text="${review.category}" class ="center"></h4>
         <p th:text="${review.description}" ></p> 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<link rel="stylesheet" href="/css/layout.css" />
+<style>@Import</style>
+<title>Animal Tags</title>
+<body>
+    <header>navbutton</header>
+       <div class="header">
+       		<h1 class= " ">Tag</h1>
+       	</div>
+       	<div class="review">
+       		<p th:each= "review:${tag.reviews}">
+       			<span th: text= "{review.title}"></span>
+       		</p>       
+            </div>
+            
+       <footer>
+       	<nav class="navbar">
+       		<ul>
+       			<p>&copy;</p>
+       			<li><a th:href=@{/tags}>Tags</a></li>
+       		</ul>
+       			
+       	</nav>
+       </footer>
+</body>
+</html>
